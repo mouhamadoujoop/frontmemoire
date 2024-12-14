@@ -1,0 +1,38 @@
+.sidenav-container {
+    height: 100vh;
+    display: flex;
+  }
+  
+  .sidenav {
+    width: 250px;
+    background: #f5f5f5;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-title {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .mat-nav-list {
+    padding: 0;
+  }
+  
+  .mat-list-item {
+    padding: 8px 16px;
+  }
+  
+  .mat-list-item button {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 16px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 24px;
+    background: #fff;
+  }
+  

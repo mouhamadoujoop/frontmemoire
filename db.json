@@ -1,0 +1,28 @@
+{
+  "projets": [
+    {
+      "id": "1",
+      "nom": "Stade de Dakar",
+      "budget": 1500000,
+      "dateDebut": "2024-01-01",
+      "dateFin": "2024-12-31",
+      "status": "En cours"
+    },
+    {
+      "id": "2",
+      "nom": "Route Nationale 1",
+      "budget": 2000000,
+      "dateDebut": "2024-03-01",
+      "dateFin": "2025-03-01",
+      "status": "En préparation"
+    },
+    {
+      "id": "4355",
+      "status": "En préparation",
+      "nom": "Stade Thiaroye",
+      "budget": 2000000,
+      "dateDebut": null,
+      "dateFin": "2025-02-03T00:00:00.000Z"
+    }
+  ]
+}

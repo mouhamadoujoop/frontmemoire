@@ -1,0 +1,24 @@
+<div class="project-list">
+    <h1>Liste des Projets</h1>
+    <button mat-raised-button color="primary" (click)="openDialog()">Ajouter un projet</button>
+    <mat-table [dataSource]="projects" class="mat-elevation-z8">
+      <!-- Colonnes -->
+      <ng-container matColumnDef="nom">
+        <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+        <mat-cell *matCellDef="let project"> {{ project.nom }} </mat-cell>
+      </ng-container>
+  
+      <!-- Actions -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let project">
+          <button mat-button color="accent" (click)="openDialog(project)">Modifier</button>
+          <button mat-button color="warn" (click)="deleteProject(project.id)">Supprimer</button>
+        </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="['nom', 'actions']"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: ['nom', 'actions']"></mat-row>
+    </mat-table>
+</div>
+ 

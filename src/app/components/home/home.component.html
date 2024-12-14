@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- Menu latéral -->
+    <mat-sidenav mode="side" opened class="sidenav">
+      <mat-nav-list>
+        <h3 class="menu-title">Menu</h3>
+        <mat-list-item>
+          <button mat-button routerLink="/">Accueil</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button routerLink="/projects">Projets</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button routerLink="/settings">Paramètres</button>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Contenu principal -->
+    <mat-sidenav-content class="content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

@@ -1,0 +1,61 @@
+]
+
+<h2 mat-dialog-title>{{ data.id ? 'Modifier' : 'Ajouter' }} un projet</h2>
+<mat-dialog-content>
+  <div class="form-container">
+    <mat-grid-list cols="2" rowHeight="100px" gutterSize="16px">
+      <!-- Nom du projet -->
+      <mat-grid-tile colspan="2">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nom du projet</mat-label>
+          <input matInput [(ngModel)]="data.nom" />
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <!-- Budget -->
+      <mat-grid-tile>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Budget</mat-label>
+          <input matInput type="number" [(ngModel)]="data.budget" />
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <!-- Date de début -->
+      <mat-grid-tile>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date de début</mat-label>
+          <input matInput [matDatepicker]="pickerStart" [(ngModel)]="data.dateDebut" />
+          <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+          <mat-datepicker #pickerStart></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <!-- Date de fin -->
+      <mat-grid-tile>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Date de fin</mat-label>
+          <input matInput [matDatepicker]="pickerEnd" [(ngModel)]="data.dateFin" />
+          <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+          <mat-datepicker #pickerEnd></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <!-- Status -->
+      <mat-grid-tile colspan="2">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Status</mat-label>
+          <mat-select [(ngModel)]="data.status">
+            <mat-option value="En cours">En cours</mat-option>
+            <mat-option value="Terminé">Terminé</mat-option>
+            <mat-option value="En préparation">En préparation</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-stroked-button color="warn" (click)="onClose()">Annuler</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Sauvegarder</button>
+</mat-dialog-actions>
