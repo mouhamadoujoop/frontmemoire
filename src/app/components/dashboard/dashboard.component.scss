@@ -1,0 +1,45 @@
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .stat-card {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .chart-card {
+    min-width: 300px;
+  }
+  
+  .chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    height: 300px; /* Hauteur du graphique */
+  }
+  
+  .activities-card {
+    min-width: 300px;
+  }
+  
+  .recent-activities .mat-list-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .timestamp {
+    font-size: 0.8rem;
+    color: gray;
+  }
+  

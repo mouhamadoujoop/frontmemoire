@@ -1,23 +1,36 @@
+<mat-toolbar class="navbar">
+  <span class="navbar-title">C-GIM</span>
+
+  <!-- Bouton de déconnexion aligné à droite -->
+  <button mat-button (click)="logout()" class="logout-button">Déconnexion</button>
+</mat-toolbar>
+
 <mat-sidenav-container class="sidenav-container">
-    <!-- Menu latéral -->
-    <mat-sidenav mode="side" opened class="sidenav">
-      <mat-nav-list>
-        <h3 class="menu-title">Menu</h3>
-        <mat-list-item>
-          <button mat-button routerLink="/">Accueil</button>
-        </mat-list-item>
-        <mat-list-item>
-          <button mat-button routerLink="/projects">Projets</button>
-        </mat-list-item>
-        <mat-list-item>
-          <button mat-button routerLink="/settings">Paramètres</button>
-        </mat-list-item>
-      </mat-nav-list>
-    </mat-sidenav>
-  
-    <!-- Contenu principal -->
-    <mat-sidenav-content class="content">
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
+  <!-- Menu latéral -->
+  <mat-sidenav mode="side" opened class="sidenav">
+    <mat-nav-list>
+      <mat-list-item>
+        <button mat-button routerLink="/dashboard">Dashboard</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/projects">Gestion des Projets</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/commanditaires">Commanditaires</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/paiements">Paiements</button>
+      </mat-list-item>
+      
+      <mat-list-item>
+        <button mat-button routerLink="/settings">Paramètres</button>
+      </mat-list-item>
+    
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenu principal -->
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

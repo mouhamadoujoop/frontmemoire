@@ -47,16 +47,35 @@
     flex: 1;
     padding: 24px;
     background: #fff;
+  
+  
+  
+  }
+  .project-list-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    padding: 16px;
   }
   
   .project-list {
-    h1 {
-      margin-bottom: 16px;
-      font-size: 24px;
-    }
-  
-    mat-table {
-      margin-top: 16px;
-    }
+    max-width: 800px; /* Largeur maximale */
+    width: 100%; /* Prend toute la largeur disponible en dessous de 800px */
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
+  h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  mat-table {
+    width: 100%; /* Table s'adapte à la largeur du conteneur */
+  }
+  
+  button {
+    margin-bottom: 16px;
+  }
+    

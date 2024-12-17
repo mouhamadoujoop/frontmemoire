@@ -1,38 +1,55 @@
-.sidenav-container {
-    height: 100vh;
-    display: flex;
-  }
-  
-  .sidenav {
-    width: 250px;
-    background: #f5f5f5;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu-title {
-    padding: 16px;
-    font-size: 18px;
-    font-weight: bold;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .mat-nav-list {
-    padding: 0;
-  }
-  
-  .mat-list-item {
-    padding: 8px 16px;
-  }
-  
-  .mat-list-item button {
-    width: 100%;
-    justify-content: flex-start;
-    font-size: 16px;
-  }
-  
-  .content {
-    flex: 1;
-    padding: 24px;
-    background: #fff;
-  }
-  
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background: #f5f5f5;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-title {
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.mat-nav-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-list-item {
+  padding: 8px 16px;
+}
+
+.mat-list-item button {
+  width: 100%;
+  justify-content: flex-start;
+  font-size: 16px;
+}
+
+.logout-item {
+  margin-top: auto;  /* Pushes the logout button to the bottom */
+  margin-left: auto; /* Aligns the logout button to the right */
+  text-align: right;
+}
+
+.content {
+  flex: 1;
+  padding: 24px;
+  background: #fff;
+}
+.navbar {
+  padding: 0 16px;
+}
+
+.logout-button {
+  margin-left: auto; /* Pousse le bouton à l'extrême droite */
+  color: rgb(27, 8, 81);
+}
+
+.navbar-title {
+  font-size: 18px;
+  font-weight: bold;
+}

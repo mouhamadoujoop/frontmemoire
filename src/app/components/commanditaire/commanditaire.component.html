@@ -1,0 +1,31 @@
+<div class="commanditaires-list">
+  
+    <div *ngFor="let commanditaire of commanditaires" class="commanditaire-item">
+      <mat-card class="commanditaire-card">
+        <mat-card-header>
+          <mat-card-title>{{ commanditaire.nom }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Email: {{ commanditaire.email }}</p>
+          <p>Montant Financé: {{ commanditaire.montantFinance | number: '1.0-0' }} FCFA</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="viewProjects(commanditaire)">Voir les projets</button>
+        </mat-card-actions>
+      </mat-card>
+     <!-- Nouvelle carte 2 -->
+     <mat-card class="commanditaire-card">
+        <mat-card-header>
+          <mat-card-title>Historique des paiements</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Dernier paiement: {{ commanditaire.lastPaymentDate | date: 'shortDate' }}</p>
+          <p>Montant payé: {{ commanditaire.lastPaymentAmount | currency: 'CFA' }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click)="viewProjects(commanditaire)">Voir les projets</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

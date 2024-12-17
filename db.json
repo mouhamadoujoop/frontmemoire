@@ -1,7 +1,21 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "email": "momodev@gmail.com",
+      "password": "password123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "momo@gmail.com",
+      "password": "userpassword",
+      "role": "user"
+    }
+  ],
   "projets": [
     {
-      "id": "1",
+      "id": 1,
       "nom": "Stade de Dakar",
       "budget": 1500000,
       "dateDebut": "2024-01-01",
@@ -9,7 +23,7 @@
       "status": "En cours"
     },
     {
-      "id": "2",
+      "id": 2,
       "nom": "Route Nationale 1",
       "budget": 2000000,
       "dateDebut": "2024-03-01",
@@ -17,12 +31,83 @@
       "status": "En préparation"
     },
     {
-      "id": "4355",
-      "status": "En préparation",
-      "nom": "Stade Thiaroye",
-      "budget": 2000000,
+      "id": 3,
+      "nom": "Gare Routière Rufisque",
+      "budget": 500000,
+      "dateDebut": "2024-12-08",
+      "dateFin": "2025-08-04",
+      "status": "En cours"
+    },
+    {
+      "id": "86b8",
+      "status": "Terminé",
+      "nom": "Mosque Touba Thiaroye",
+      "budget": 5400000,
       "dateDebut": null,
-      "dateFin": "2025-02-03T00:00:00.000Z"
+      "dateFin": "2024-09-12"
+    }
+  ],
+  "commanditaires": [
+    {
+      "id": "1",
+      "nom": "Ageroutes",
+      "email": "ageroute@gmail.com",
+      "montantFinance": 1000000,
+      "projets": [
+        {
+          "id": 1,
+          "nom": "Dakar - Diamniadio",
+          "status": "En cours"
+        },
+        {
+          "id": 2,
+          "nom": "Gare de Beaux Maraichers",
+          "status": "Terminé"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "nom": "Ministère des transports",
+      "email": "ministere@gmail.com",
+      "montantFinance": 2000000,
+      "projets": [
+        {
+          "id": 3,
+          "nom": "Stade Parcelle assainies",
+          "status": "En préparation"
+        }
+      ]
+    }
+  ],
+  "paiements": [
+    {
+      "id": "1",
+      "commanditaireId": "1",
+      "montant": 500000,
+      "date": "2024-12-15",
+      "statut": "Payé"
+    },
+    {
+      "id": "2",
+      "commanditaireId": "2",
+      "montant": 1000000,
+      "date": "2024-12-14",
+      "statut": "En attente"
+    }
+  ],
+  "recentActivities": [
+    {
+      "title": "Création du projet Stade de Dakar",
+      "timestamp": "2024-12-10T10:00:00"
+    },
+    {
+      "title": "Mise à jour du budget pour Route Nationale 1",
+      "timestamp": "2024-12-11T14:30:00"
+    },
+    {
+      "title": "Changement de statut pour Gare Routière Rufisque",
+      "timestamp": "2024-12-12T09:15:00"
     }
   ]
 }

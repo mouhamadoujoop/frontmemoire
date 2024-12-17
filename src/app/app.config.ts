@@ -3,7 +3,6 @@ import { provideRouter } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { importProvidersFrom } from '@angular/core';
 
-
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -17,6 +16,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms'; // Importer FormsModule
 
 import { routes } from './app.routes';
 
@@ -38,7 +40,9 @@ export const appConfig: ApplicationConfig = {
       MatIconModule,
       MatListModule,
       MatGridListModule,
-      
+      MatCardModule,
+      MatTableModule,
+      FormsModule,
     ),
   ],
 };
